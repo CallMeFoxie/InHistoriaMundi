@@ -13,9 +13,9 @@ public class MethodToPatch {
    public String name;
    public String descriptor;
 
-   public MethodToPatch(String name, String descriptor) {
-      this.name = name;
-      this.descriptor = descriptor;
+   public MethodToPatch(MCPMappingWithDescriptor name) {
+      this.name = name.getName();
+      this.descriptor = name.getDescriptor();
    }
 
    public boolean matchesMethod(String name, String descriptor) {

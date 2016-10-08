@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 import java.util.Map;
 
-@IFMLLoadingPlugin.MCVersion("1.9.4")
+@IFMLLoadingPlugin.MCVersion("1.10.2")
 @IFMLLoadingPlugin.Name(IHMCoreLoader.NAME)
 public class IHMCoreLoader implements IFMLLoadingPlugin {
    public static final String NAME = "IHM Core";

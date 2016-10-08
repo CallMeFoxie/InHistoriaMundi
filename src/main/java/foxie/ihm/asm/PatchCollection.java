@@ -25,21 +25,19 @@ public class PatchCollection implements IClassTransformer {
    public static Map<String, List<Class<? extends ClassPatch>>> patchClasses;
 
    static {
-      addPatch("net.minecraft.world.WorldServer", PatchFreezeAllWater.class);
-
-      addPatch("lq", PatchFreezeAllWater.class);
+      addPatch(new MCPMapping("net.minecraft.world.WorldServer", "lq"), PatchFreezeAllWater.class);
    }
 
-   public static void addPatch(String classname, Class<? extends ClassPatch> patch) {
+   public static void addPatch(MCPMapping classname, Class<? extends ClassPatch> patch) {
       if (patchClasses == null)
          patchClasses = new HashMap<String, List<Class<? extends ClassPatch>>>();
 
-      if (patchClasses.get(classname) != null) {
-         patchClasses.get(classname).add(patch);
+      if (patchClasses.get(classname.getName()) != null) {
+         patchClasses.get(classname.getName()).add(patch);
       } else {
          List<Class<? extends ClassPatch>> tmp = new ArrayList<Class<? extends ClassPatch>>();
          tmp.add(patch);
-         patchClasses.put(classname, tmp);
+         patchClasses.put(classname.getName(), tmp);
       }
    }
 

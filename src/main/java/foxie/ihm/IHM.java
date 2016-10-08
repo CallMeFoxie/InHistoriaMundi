@@ -13,7 +13,7 @@ import foxie.lib.IFoxieMod;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(modid = IHM.MODID, name = IHM.NAME, version = IHM.VERSION,
-        dependencies = "required-after:FoxieLib;required-after:CalendarAPI")
+        dependencies = "required-after:foxielib;required-after:calendarapi")
 public class IHM implements IFoxieMod {
    public static final String MODID = "inhistoriamundi";
    public static final String NAME = "In Historia Mundi";
